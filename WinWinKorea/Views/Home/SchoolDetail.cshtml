@@ -175,10 +175,11 @@
                             bannerSchoolJs();
 
                             //get thông tin trường
-                            var infoSchool = `<li><b>Tên trường</b><p> ` + data.ten + ` </p></li>
-                                              <li><b>Địa chỉ</b><hr><p class="truncate-h" data-line="1"> ` + data.diaChi + ` </p></li>
-                                              <li><b>Số điện thoại</b><hr><p> ` + data.soDienThoai + ` </p></li>
-                                              <li><b>Email</b><hr><p> ` + data.email + ` </p></li>
+                            var infoSchool = `<li><b>Tên trường: </b><p> ` + data.ten + ` </p></li>
+                                              <li><b>Địa chỉ: </b><p class="truncate-h" data-line="1"> ` + data.diaChi + ` </p></li>
+                                              <li><b>Số điện thoại: </b><p> ` + data.soDienThoai + ` </p></li>
+                                              <li><b>Email: </b><p> ` + data.email + ` </p></li>
+                                              <li><b>Website: </b><p> ` + data.website + ` </p></li>
                                             `
                             $("#txt-list-js").html(infoSchool);
 
@@ -187,8 +188,8 @@
 
                             //get văn phòng tuyển sinh
                             var office = `<li><b> ` + data.vanPhongTuyenSinh.ten + ` </b><hr></li>
-                                            <li><b>Địa chỉ</b><hr><p class="truncate-h" data-line="1"> ` + data.vanPhongTuyenSinh.diaChi + ` </p></li>
-                                            <li><b>Số điện thoại</b><hr><p> ` + data.vanPhongTuyenSinh.soDienThoai + ` </p></li>`
+                                            <li><b>Địa chỉ: </b><p class="truncate-h" data-line="1"> ` + data.vanPhongTuyenSinh.diaChi + ` </p></li>
+                                            <li><b>Số điện thoại: </b><p> ` + data.vanPhongTuyenSinh.soDienThoai + ` </p></li>`
                             $("#office-js").html(office);
 
                             //get lĩnh vực
