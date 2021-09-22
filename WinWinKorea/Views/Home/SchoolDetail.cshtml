@@ -1,0 +1,233 @@
+﻿@{
+    ViewData["Title"] = "Thông tin trường học";
+    var idTruong = ViewData["idTruong"] as string;
+}
+<header>
+    <img class="img-cover" src="/img/banner/city.jpg" alt="..." />
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="nav__left">
+                <a href="/" class="logo">
+                    <img class="logo-img v1" src="img/logo-icon/logov2.png" alt="..." />
+                    <img class="logo-img v2" src="img/logo-icon/logov3.png" alt="..." />
+                </a>
+                <ul class="ul-reset menu">
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li>
+                        <a href="/danh-sach-truong-hoc">Giáo dục <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/danh-sach-truong-hoc">Tuyển sinh</a></li>
+                            <li><a class="stretched-link" href="/danh-sach-bai-giang">Học online</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tiện ích <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/viec-lam">Việc làm</a></li>
+                            <li><a class="stretched-link" href="/phong-tro">Phòng trọ</a></li>
+                            <li><a class="stretched-link" href="/ket-ban">Kết bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ khác <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/dat-ve-may-bay">Đặt vé máy bay</a></li>
+                            <li><a class="stretched-link" href="/chuyen-tien-quoc-te">Chuyển tiền quốc tế</a></li>
+                            <li><a class="stretched-link" href="/chuyen-phat-nhanh">Chuyển phát nhanh</a></li>
+                            <li><a class="stretched-link" href="/thuong-mai">Thương mại</a></li>
+                            <li><a class="stretched-link" href="/van-hoa">Văn hóa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/chinh-sach-va-dieu-khoan">Chính sách & điều khoản</a></li>
+                    <li><a href="/lien-he">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="#">
+                    <img src="/img/logo-icon/apple_icon.png" />
+                </a>
+                <a href="#">
+                    <img src="/img/logo-icon/gplay_icon.png" />
+                </a>
+                <div class="bar-mobile">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title-main mt-lg-10 mt-3 name-school-js"></h1>
+        <div class="text-center mt-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="/danh-sach-truong-hoc">Giáo dục</a></li>
+                <li class="breadcrumb-item active name-school-js" aria-current="page"></li>
+            </ol>
+        </div>
+    </div>
+</header>
+<div class="bg-white py-lg-10 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-9">
+                <div id="slide-js">
+                    <div class="owl-carousel school-owl">
+                        <div class="slide-owl">
+                            <img class="img-school-cover" src="/img/banner/city.jpg" alt="..." />
+                        </div>
+                        <div class="slide-owl">
+                            <img class="img-school-cover" src="/img/banner/aaa.jpg" alt="..." />
+                        </div>
+                        <div class="slide-owl">
+                            <img class="img-school-cover" src="/img/banner/phongtro.jpg" alt="..." />
+                        </div>
+                    </div>
+                </div>
+                <ul class="ul-block text-list my-lg-4 my-3 overflow-hidden" id="txt-list-js">
+                </ul>
+                <div class="content-detail">
+                    <p id="description-js">
+                    </p>
+                </div>
+                <div class="box-shadow mt-lg-8 mb-lg-5 mt-5">
+                    <div class="detail-title">Văn phòng đại diện</div>
+                    <div class="box-shadow__body">
+                        <ul class="ul-block text-list overflow-hidden" id="office-js">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-shadow mt-lg-8 mb-lg-5 mt-5">
+                    <div class="detail-title">Lĩnh vực đào tạo</div>
+                    <div class="box-shadow__body">
+                        <table class="table table-borderless" id="fields-js">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Linh vực đào tạo</th>
+                                    <th scope="col">Đào tạo</th>
+                                    <th scope="col">Học phí/kỳ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @*<div class="box-shadow mt-lg-8 mb-lg-5 mt-5">
+                    <div class="detail-title">Mẫu biểu</div>
+                    <div class="box-shadow__body">
+                        <div class="row row-gutter-10">
+                            <div class="col-sm-12 col-6 col-lg-3">
+                                <a href="/img/banner/maubieu.jpg" download>
+                                    <img class="img-fluid img-file" src="/img/banner/maubieu.jpg" alt="..." loading="lazy" />
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-6 col-lg-3">
+                                <a href="#">
+                                    <img class="img-fluid img-file" src="/img/banner/maubieu.jpg" alt="..." loading="lazy" />
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-6 col-lg-3">
+                                <a href="#">
+                                    <img class="img-fluid img-file" src="/img/banner/maubieu.jpg" alt="..." loading="lazy" />
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-6 col-lg-3">
+                                <a href="#">
+                                    <img class="img-fluid img-file" src="/img/banner/maubieu.jpg" alt="..." loading="lazy" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+            <div class="col-sm-12 col-lg-3">
+                @Html.Partial("MenuChild")
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            if (ReadCookie("token") !== "") {
+                req = getDetailTruong(@idTruong);
+                req.done(function (response) {
+                    console.log(response.data)
+                    if (response.statusCode === Const.SuccessCode) {
+                        try {
+                            var data = response.data;
+                            //get tên trường
+                            var nameSchool = data.ten;
+                            $(".name-school-js").html(nameSchool);
+
+                            //get slide img
+                            var slide = "";
+                            slide += '<div class="owl-carousel school-owl">'
+                            for (const img of data.anhs) {
+                                slide += ' <div class="slide-owl">'
+                                slide += '<img class="img-school-cover" src="' + img.path + '" alt="..." />'
+                                slide += '</div>'
+                            }
+                            slide += '</div>'
+                            $("#slide-js").html(slide);
+                            bannerSchoolJs();
+
+                            //get thông tin trường
+                            var infoSchool = `<li><b>Tên trường</b><p> ` + data.ten + ` </p></li>
+                                              <li><b>Địa chỉ</b><hr><p class="truncate-h" data-line="1"> ` + data.diaChi + ` </p></li>
+                                              <li><b>Số điện thoại</b><hr><p> ` + data.soDienThoai + ` </p></li>
+                                              <li><b>Email</b><hr><p> ` + data.email + ` </p></li>
+                                            `
+                            $("#txt-list-js").html(infoSchool);
+
+                            var description = data.gioiThieu;
+                            $("#description-js").html(description);
+
+                            //get văn phòng tuyển sinh
+                            var office = `<li><b> ` + data.vanPhongTuyenSinh.ten + ` </b><hr></li>
+                                            <li><b>Địa chỉ</b><hr><p class="truncate-h" data-line="1"> ` + data.vanPhongTuyenSinh.diaChi + ` </p></li>
+                                            <li><b>Số điện thoại</b><hr><p> ` + data.vanPhongTuyenSinh.soDienThoai + ` </p></li>`
+                            $("#office-js").html(office);
+
+                            //get lĩnh vực
+                            for (const item of data.linhVuc) {
+                                var fields = `<tr>
+                                            <td>` + item.ten + `</td>
+                                            <td>` + item.thoiGianDaoTao + `</td>
+                                            <td>` + item.hocPhi + " " + item.donViTienTe +`</td>
+                                          </tr>`
+                                console.log(item.ten);
+                                $("#fields-js tbody").append(fields);
+                            }
+                        } catch (e) {
+                            $.toast({
+                                heading: 'Thông báo',
+                                text: e,
+                                showHideTransition: 'fade',
+                                icon: 'error'
+                            })
+                        }
+                    } else {
+                        $.toast({
+                            heading: 'Thông báo',
+                            text: response.message,
+                            showHideTransition: 'fade',
+                            icon: 'error'
+                        })
+                    }
+                });
+            }
+            else {
+                $.toast({
+                    heading: 'Thông báo',
+                    text: 'Không lấy được token!',
+                    showHideTransition: 'fade',
+                    icon: 'error'
+                })
+            }
+        });
+
+    </script>
+}

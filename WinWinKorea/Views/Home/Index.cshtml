@@ -1,0 +1,443 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+@section Scripts{ 
+<script>
+    IndexJs();
+</script>
+}
+<section class="banner-section">
+    <div class="owl-carousel banner-owl">
+        <div class="slide-owl">
+            <div class="banner-owl__content">
+                <h2>WinWinKorea</h2>
+                <p>
+                    Xây dựng WinWin trở thành một thương hiệu uy tín với chiến lược phát triển trường tồn.
+                </p>
+                @*<a href="#" class="btn btn-style mt-lg-8 mt-6">Xem thêm</a>*@
+            </div>
+            <a href="#">
+                <img class="img img-banner" src="/img/banner/slide-1.jpg" alt="..." />
+            </a>
+        </div>
+        <div class="slide-owl">
+            <div class="banner-owl__content">
+                <h2>Đâu cần WinWin có, đâu khó có WinWin</h2>
+                <p>
+                    Trung thành với quan điểm luôn nỗ lực hết mình, nhằm mang lại chất lượng dịch vụ tốt nhất, tạo ra một siêu ứng dụng tiện ích cho Du học sinh Việt Nam.
+                </p>
+                @*<a href="#" class="btn btn-style mt-lg-8 mt-6">Xem thêm</a>*@
+            </div>
+            <a href="#">
+                <img class="img img-banner" src="/img/banner/slide-2.jpg" alt="..." />
+            </a>
+        </div>
+        <div class="slide-owl">
+            <div class="banner-owl__content">
+                <h2>Hệ Sinh thái WinWin Korea</h2>
+                <p>
+                    Với khao khát biến bạn trở thành công dân toàn cầu, WinWin Korea đưa công nghệ vào cuộc sống của bạn
+                </p>
+                @*<a href="#" class="btn btn-style mt-lg-8 mt-6">Xem thêm</a>*@
+            </div>
+            <a href="#">
+                <img class="img img-banner" src="/img/banner/slide-3.jpg" alt="..." />
+            </a>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="nav__left">
+                <a href="/" class="logo">
+                    <img class="logo-img v1" src="img/logo-icon/logov2.png" alt="..." />
+                    <img class="logo-img v2" src="img/logo-icon/logov3.png" alt="..." />
+                </a>
+                <ul class="ul-reset menu">
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li>
+                        <a href="/danh-sach-truong-hoc">Giáo dục <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/danh-sach-truong-hoc">Tuyển sinh</a></li>
+                            <li><a class="stretched-link" href="/danh-sach-bai-giang">Học online</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tiện ích <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/viec-lam">Việc làm</a></li>
+                            <li><a class="stretched-link" href="/phong-tro">Phòng trọ</a></li>
+                            <li><a class="stretched-link" href="/ket-ban">Kết bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ khác <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/dat-ve-may-bay">Đặt vé máy bay</a></li>
+                            <li><a class="stretched-link" href="/chuyen-tien-quoc-te">Chuyển tiền quốc tế</a></li>
+                            <li><a class="stretched-link" href="/chuyen-phat-nhanh">Chuyển phát nhanh</a></li>
+                            <li><a class="stretched-link" href="/thuong-mai">Thương mại</a></li>
+                            <li><a class="stretched-link" href="/van-hoa">Văn hóa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/chinh-sach-va-dieu-khoan">Chính sách & điều khoản</a></li>
+                    <li><a href="/lien-he">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="https://apps.apple.com/vn/app/winwin-korea/id1578604911">
+                    <img src="/img/logo-icon/apple_icon.png" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.cooftech.winwinkorea">
+                    <img src="/img/logo-icon/gplay_icon.png" />
+                </a>
+                <div class="bar-mobile">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="bg-gray">
+    <div class="container">
+        <div class="row height-fix">
+            <div class="col-sm-4 col-4 col-md-4 col-lg-4">
+                <a class="box-intro" href="#giao-duc">
+                    <div class="box-intro__icon">
+                        <img src="/img/logo-icon/school.svg" alt="..." />
+                    </div>
+                    <div class="box-intro__content">
+                        <div class="box-intro__title">
+                            Giáo dục
+                        </div>
+                        <p class="truncate-h" data-line="2">Hệ thông kết nối trực tiếp với hơn 100 trường học tại nhiều tỉnh thành của Hàn Quốc.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-4 col-md-4 col-lg-4">
+                <a class="box-intro" href="#tien-ich">
+                    <div class="box-intro__icon v2">
+                        <img src="/img/logo-icon/social.svg" alt="..." />
+                    </div>
+                    <div class="box-intro__content">
+                        <div class="box-intro__title">
+                            Tiện ích
+                        </div>
+                        <p class="truncate-h" data-line="2">Cung cấp các tiện ích hữu ích cho bạn khi đăng ký du học cùng WinWinKorea.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-4 col-md-4 col-lg-4">
+                <a class="box-intro" href="#dich-vu-khac">
+                    <div class="box-intro__icon v3">
+                        <img src="/img/logo-icon/service.svg" alt="..." />
+                    </div>
+                    <div class="box-intro__content">
+                        <div class="box-intro__title">
+                            Dịch vụ khác
+                        </div>
+                        <p class="truncate-h" data-line="2">WinWinKorea liên tục mở rộng trên nhiều lĩnh vực khác nhau trên thị trường.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container overflow-hidden py-lg-10 py-5">
+    <div class="row px-lg-5 px-md-10 pt-lg-6">
+        <div class="col-sm-12 d-lg-block d-none col-lg-4" data-aos="fade-up" data-aos-duration="700">
+            <img class="img-animation mt-lg-3" src="/img/banner/about.png" alt="..." />
+        </div>
+        <div class="col-sm-12 col-lg-8 pl-lg-10" data-aos="fade-left" data-aos-duration="700">
+            <h2 class="title">
+                <span>Về chúng tôi</span>
+                Giới thiệu về chúng tôi
+                <span class="shadow-txt">
+                    Giới thiệu về chúng tôi
+                </span>
+            </h2>
+            <p class="description mt-lg-4 mt-3 truncate-h" data-line="4">
+                Công Ty cổ phần tập đoàn WinWin xin gửi lời chào trân trọng, lời chúc sức khỏe, lời cảm ơn chân thành và sâu sắc nhất.
+                Rất lấy làm vinh hạnh cho chúng tôi khi có cơ hội được giới thiệu về app công nghệ mang thương hiệu WinWin Korea.
+            </p>
+            <a href="/gioi-thieu" class="link-about">Xem thêm</a>
+            <div class="row mt-lg-10 mt-6">
+                <div class="col-sm-6 col-12 col-md-6 col-lg-6 mb-lg-8 mb-4">
+                    <div class="media media_about">
+                        <img src="/img/logo-icon/piggy-bank.svg" alt="...">
+                        <div class="media-body">
+                            <div class="media_about__title">Tiết kiệm chi phí </div>
+                            <span class="truncate-h" data-line="3">Chúng tôi miễn phí dịch vụ 100% cho du học sinh và cộng đồng Việt Nam trên tất cả các ứng dụng WinWin.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12 col-md-6 col-lg-6 mb-lg-8 mb-4">
+                    <div class="media media_about">
+                        <img src="/img/logo-icon/time.svg" alt="...">
+                        <div class="media-body">
+                            <div class="media_about__title">Thời gian xuất cảnh</div>
+                            <span class="truncate-h" data-line="3">Đảm bảo xuất cảnh đúng thời gian khai giảng tại các trường Đại học, theo nguyện vọng của du học sinh.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12 col-md-6 col-lg-6 mb-lg-8 mb-4">
+                    <div class="media media_about">
+                        <img src="/img/logo-icon/filev2.svg" alt="...">
+                        <div class="media-body">
+                            <div class="media_about__title">Tạo hồ sơ đơn giản</div>
+                            <span class="truncate-h" data-line="3">Chỉ với 4 bước nhanh gọn, bạn có thể đăng ký thành công chương trình đi du học các nước trên thế giới.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12 col-md-6 col-lg-6">
+                    <div class="media media_about">
+                        <img src="/img/logo-icon/callv2.svg" alt="...">
+                        <div class="media-body">
+                            <div class="media_about__title">Hỗ trợ 24/7</div>
+                            <span class="truncate-h" data-line="3">WinWinKorea luôn luôn đồng hành với đối tác và quý khách hàng mọi lúc mọi nơi..</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray py-lg-10 py-5">
+    <div class="container py-lg-5 py-2">
+        <h2 class="title text-center title-step">
+            Đăng ký du học
+            <span class="shadow-txt">Đăng ký du học</span>
+        </h2>
+        <div class="row row-step mt-lg-10 pt-lg-8 mt-6" data-aos="fade-up" data-aos-duration="700">
+            <div class="col-sm-12 col-6 col-md-6 col-lg-3">
+                <div class="box-step">
+                    <div class="box-step__number">
+                        <span>Bước</span> <strong>01</strong>
+                    </div>
+                    <div class="box-step__icon">
+                        <img src="img/logo-icon/file-step.svg" alt="..." loading="lazy" />
+                    </div>
+                    <div class="box-step__title">Nộp hồ sơ ứng tuyển online</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-6 col-md-6 col-lg-3">
+                <div class="box-step v2">
+                    <div class="box-step__number">
+                        <span>Bước</span> <strong>02</strong>
+                    </div>
+                    <div class="box-step__icon">
+                        <img src="img/logo-icon/customer-step.svg" alt="..." loading="lazy" />
+                    </div>
+                    <div class="box-step__title">Nhận Invoice và đóng tiền sang trường</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-6 col-md-6 col-lg-3">
+                <div class="box-step v3">
+                    <div class="box-step__number">
+                        <span>Bước</span> <strong>03</strong>
+                    </div>
+                    <div class="box-step__icon">
+                        <img src="img/logo-icon/visa-step.svg" alt="..." loading="lazy" />
+                    </div>
+                    <div class="box-step__title">Hoàn tất nộp xin Visa tại Đại Sứ Quán</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-6 col-md-6 col-lg-3">
+                <div class="box-step v4">
+                    <div class="box-step__number">
+                        <span>Bước</span> <strong>04</strong>
+                    </div>
+                    <div class="box-step__icon">
+                        <img src="img/logo-icon/school-step.svg" alt="..." loading="lazy" />
+                    </div>
+                    <div class="box-step__title">Xuất cảnh</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-white bg-custom overflow-hidden py-lg-10 py-5" id="giao-duc">
+    <div class="container pt-lg-10 pb-lg-5 pt-5">
+        <h2 class="title text-center">
+            Giáo dục
+            <span class="shadow-txt">Giáo dục</span>
+        </h2>
+        <div class="description description-module mt-lg-5 mt-4 text-center">
+            Hệ thống kết nối trực tiếp với các trường Đai Học danh tiếng trên toàn thế giới. WinWin sẽ luôn luôn đồng hành cùng du học sinh trên suốt chặng đường.
+        </div>
+        <div class="row mt-lg-10 mt-6">
+            <div class="col-sm-12 col-md-5 col-lg-6" data-aos="fade-up" data-aos-duration="700">
+                <img class="img-educate" src="/img/giaoduc/tuyen-sinh.jpg" alt="..." loading="lazy" />
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-6 d-flex align-items-center" data-aos="fade-left" data-aos-duration="700">
+                <div class="pl-lg-3">
+                    <div class="title-v2 mb-lg-4 mb-3">
+                        Thông tin tuyển sinh du học quốc tế
+                    </div>
+                    <p class="description truncate-h text-justify">
+                        Bộ chuyển đổi ngôn ngữ đảm bảo cung cấp các thông tin tuyển sinh chính xác nhất của các trường Đại Học trên Thế Giới. Từ đó du học sinh có thể tự mình tìm hiểu, và đăng ký trực tiếp tại ngôi trường mà mình lựa chọn khi đi du học, với chi phí thấp thanh toán trực tiếp với nhà trường không qua mô giới.
+                    </p>
+                    <a href="/danh-sach-truong-hoc" class="btn btn-style mt-lg-5 mt-3">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-lg-8 mt-3">
+            <div class="col-sm-12 col-md-7 col-lg-6 order-1 order-md-0 d-flex align-items-center text-right" data-aos="fade-down" data-aos-duration="700">
+                <div class="pr-lg-3">
+                    <div class="title-v2 mb-lg-4 mb-3">
+                        Học online
+                    </div>
+                    <p class="description truncate-h">
+                        Bộ Giáo Dục quyết định vào 25/12/2020.  Tiếng Hàn và tiếng Đức là ngoại ngữ loại 1 hệ đào tạo 10 năm. Với hệ thống giáo dục Online từ giáo viên bản địa, sẽ giúp thế hệ trẻ có bài giảng chất lượng và cung cấp tài liệu miễn phí, giúp các em có 1 nên tảng ngôn ngữ tốt là hành trang bước vào tương lai.
+                    </p>
+                    <a href="/danh-sach-bai-giang" class="btn btn-style mt-lg-5 mt-3">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-5 col-lg-6 order-0 order-md-1" data-aos="fade-right" data-aos-duration="700">
+                <img class="img-educate" src="/img/giaoduc/online.jpg" alt="..." loading="lazy" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-lg-10 py-5" id="tien-ich">
+    <h2 class="title text-center mt-lg-8 mt-4">
+        Tiện ích
+        <span class="shadow-txt">
+            Tiện ích
+        </span>
+    </h2>
+    <div class="description description-module mt-lg-5 mt-4 text-center">
+        Cung cấp các tiện ích giúp cộng đồng người Việt Nam và người nước ngoài hòa nhập nhanh chóng ở nước sở tại khi sử dụng app WinWin.
+    </div>
+    <div class="row row-mobile-5 mt-lg-10 mt-5 align-items-center">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="utilities-box">
+                <a href="/viec-lam" class="utilities-box__img">
+                    <img src="/img/tienich/viec-lam.jpg" alt="..." loading="lazy" />
+                </a>
+                <div class="utilities-box__content">
+                    <div class="title-v2">Việc làm</div>
+                    <p class="description truncate-h" data-line="4">
+                        App WinWin sẽ giải quyết triệt để về nỗi lo lắng tìm việc làm thêm cho du học sinh nơi đất khách quê người, đảm bảo thu nhập trang trải cuộc sống và học tập. Du học sinh chỉ cần thực hiện theo hướng dẫn là sẽ tìm kiếm được những công việc mình mong muốn tại khu vực mình đang sống và học tập.
+                    </p>
+                    <a href="/viec-lam" class="btn">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="utilities-box center">
+                <a href="/phong-tro" class="utilities-box__img">
+                    <img src="/img/tienich/phong-tro.jpg" alt="..." loading="lazy" />
+                </a>
+                <div class="utilities-box__content">
+                    <div class="title-v2">Phòng trọ</div>
+                    <p class="description truncate-h" data-line="4">
+                        Để tìm kiếm được một phòng trọ ưng ý cộng đồng người Việt Nam, sẽ   phải tốn rất nhiều thời gian và công sức. Thì giờ đây với tiện ích tìm phòng trọ trên app WinWin điều đó sẽ được thực hiện chỉ trong vài thao tác.
+                    </p>
+                    <a href="/phong-tro" class="btn">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="utilities-box">
+                <a href="/ket-ban" class="utilities-box__img">
+                    <img src="/img/tienich/ket-ban.jpg" alt="..." loading="lazy" />
+                </a>
+                <div class="utilities-box__content">
+                    <div class="title-v2">Kết bạn</div>
+                    <p class="description truncate-h" data-line="4">
+                        Giúp công đồng người Việt Nam nơi xa sứ, sau những ngày học tập và làm việc vất vả tìm được người bạn tri kỷ, không có gì quý hơn cộng đồng người Việt Nam cùng nhau đoàn kết vì một cuộc sống tươi đẹp.
+                    </p>
+                    <a href="/ket-ban" class="btn">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-white bg-custom py-lg-10 py-5" id="dich-vu-khac">
+    <div class="container">
+        <h2 class="title text-center mt-lg-6 mt-3">
+            Dịch vụ khác
+            <span class="shadow-txt">
+                Dịch vụ khác
+            </span>
+        </h2>
+        <div class="description description-module mt-lg-5 mt-4 text-center">
+            Giúp cộng đồng trải nghiệm những dịch vụ chuyên nghiệp, từ các nhà cung cấp dịch vụ uy tín nhất hiện nay một cách nhanh chóng.
+        </div>
+        <div class="row row-gutter-8 mt-lg-10 mt-5 justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 mb-lg-6 mb-3">
+                <div class="utilities-box  utilities-box--service">
+                    <a href="/dat-ve-may-bay" class="utilities-box__img">
+                        <img src="/img/dichvu/dat-ve-may-bay.jpg" alt="..." loading="lazy" />
+                    </a>
+                    <div class="utilities-box__content border">
+                        <div class="title-v2">Đặt vé máy bay</div>
+                        <p class="description truncate-h" data-line="4">
+                            Hiện nay WinWin đã liên hệ và hợp tác với các hãng máy bay Quốc tế, có nhiều chế độ ưu đãi cho du học sinh và người lao động. Cam kết rẻ hơn các đại lý
+                        </p>
+                        <a href="/dat-ve-may-bay" class="btn">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mb-lg-6 mb-3">
+                <div class="utilities-box utilities-box--service">
+                    <a href="/chuyen-tien-quoc-te" class="utilities-box__img">
+                        <img src="/img/dichvu/chuyen-tien-quoc-te.jpg" alt="..." loading="lazy" />
+                    </a>
+                    <div class="utilities-box__content border">
+                        <div class="title-v2">Chuyển tiền quốc tế</div>
+                        <p class="description truncate-h" data-line="4">
+                            Chỉ vài thao tác đơn giản trên app WinWin số tiền của bạn sẽ chuyển tận tay những người thân yêu của mình, an toàn, tiết kiệm và nhanh chóng.
+                        </p>
+                        <a href="/chuyen-tien-quoc-te" class="btn">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mb-lg-6 mb-3">
+                <div class="utilities-box utilities-box--service">
+                    <a href="/chuyen-phat-nhanh" class="utilities-box__img">
+                        <img src="/img/dichvu/chuyen-phat-nhanh.jpg" alt="..." loading="lazy" />
+                    </a>
+                    <div class="utilities-box__content border">
+                        <div class="title-v2">Chuyển phát nhanh</div>
+                        <p class="description truncate-h" data-line="4">
+                            Với winwin món đồ của bạn sẽ được giao đúng nơi nhanh chóng. Giá giao hàng sẻ hiển thị trên app khi bạn nhập đầy đủ thông tin.Với đội ngũ nhân viên chuyên nghiệp chúng tôi đảm bảo sự an toàn tuyệt đối với kiện hàng của bạn.
+                        </p>
+                        <a href="/chuyen-phat-nhanh" class="btn">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mb-lg-6 mb-3">
+                <div class="utilities-box utilities-box--service">
+                    <a href="/thuong-mai" class="utilities-box__img">
+                        <img src="/img/dichvu/thuong-mai.jpg" alt="..." loading="lazy" />
+                    </a>
+                    <div class="utilities-box__content border">
+                        <div class="title-v2">Thương mại</div>
+                        <p class="description truncate-h" data-line="4">
+                            Là nơi quảng bá các thương hiệu uy tín của các mặt hàng, quán ăn, khu vui chơi giải trí của Việt Nam và các nước khác tại Hàn Quốc.
+                        </p>
+                        <a href="/thuong-mai" class="btn">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mb-lg-6 mb-3">
+                <div class="utilities-box utilities-box--service">
+                    <a href="/van-hoa" class="utilities-box__img">
+                        <img src="/img/dichvu/van-hoa.jpg" alt="..." loading="lazy" />
+                    </a>
+                    <div class="utilities-box__content border">
+                        <div class="title-v2">Văn hóa</div>
+                        <p class="description truncate-h" data-line="4">
+                            Giúp mọi người hiểu rõ hơn về văn hóa Việt Nam, Hàn Quốc và các nền văn hóa khác.
+                            Giới thiệu những khu vui chơi các món ăn nổi bật và điểm du lịch Việt Nam, Hàn Quốc.
+                            Giúp thế hệ trẻ Việt Nam và Hàn Quốc xích lại gần nhau.
+                        </p>
+                        <a href="/van-hoa" class="btn">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

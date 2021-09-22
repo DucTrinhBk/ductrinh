@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Việc làm";
+}
+<header class="header-about">
+    <img class="img-cover" src="img/banner/city.jpg" alt="..." />
+    <div class="nav" data-aos="fade-down" data-aos-duration="500">
+        <div class="container-fluid">
+            <div class="nav__left">
+                <a href="/" class="logo">
+                    <img class="logo-img v1" src="img/logo-icon/logov2.png" alt="..." />
+                    <img class="logo-img v2" src="img/logo-icon/logov3.png" alt="..." />
+                </a>
+                <ul class="ul-reset menu">
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li>
+                        <a href="/danh-sach-truong-hoc">Giáo dục <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/danh-sach-truong-hoc">Tuyển sinh</a></li>
+                            <li><a class="stretched-link" href="/danh-sach-bai-giang">Học online</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tiện ích <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/viec-lam">Việc làm</a></li>
+                            <li><a class="stretched-link" href="/phong-tro">Phòng trọ</a></li>
+                            <li><a class="stretched-link" href="/ket-ban">Kết bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ khác <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/dat-ve-may-bay">Đặt vé máy bay</a></li>
+                            <li><a class="stretched-link" href="/chuyen-tien-quoc-te">Chuyển tiền quốc tế</a></li>
+                            <li><a class="stretched-link" href="/chuyen-phat-nhanh">Chuyển phát nhanh</a></li>
+                            <li><a class="stretched-link" href="/thuong-mai">Thương mại</a></li>
+                            <li><a class="stretched-link" href="/van-hoa">Văn hóa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/chinh-sach-va-dieu-khoan">Chính sách & điều khoản</a></li>
+                    <li><a href="/lien-he">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="#">
+                    <img src="img/logo-icon/apple_icon.png" />
+                </a>
+                <a href="#">
+                    <img src="img/logo-icon/gplay_icon.png" />
+                </a>
+                <div class="bar-mobile">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title-main mt-lg-10 mt-3">Việc làm</h1>
+        <div class="text-center mt-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Việc làm</li>
+            </ol>
+        </div>
+    </div>
+</header>
+<div class="bg-white py-lg-10 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-9">
+                <img class="w-100 img-fluid" src="/img/tienich/viec-lam.jpg" alt="..." />
+                <div class="content-detail mt-lg-5 mt-0">
+                    <p>
+                        App WinWin sẽ giải quyết triệt để về nỗi lo lắng tìm việc làm thêm cho du học sinh nơi đất khách quê người, đảm bảo thu nhập trang trải cuộc sống và học tập. Du học sinh chỉ cần thực hiện theo hướng dẫn là sẽ tìm kiếm được những công việc mình mong muốn tại khu vực mình đang sống và học tập.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-3">
+                @Html.Partial("MenuChild")
+            </div>
+        </div>
+    </div>
+</div>

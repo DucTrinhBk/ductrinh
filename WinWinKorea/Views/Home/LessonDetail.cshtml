@@ -1,0 +1,180 @@
+﻿@{
+    ViewData["Title"] = "Thông tin bài giảng";
+    var idLesson = ViewData["idLesson"] as string;
+}
+<header>
+    <img class="img-cover" src="/img/banner/city.jpg" alt="..." />
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="nav__left">
+                <a href="/" class="logo">
+                    <img class="logo-img v1" src="img/logo-icon/logov2.png" alt="..." />
+                    <img class="logo-img v2" src="img/logo-icon/logov3.png" alt="..." />
+                </a>
+                <ul class="ul-reset menu">
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li>
+                        <a href="/danh-sach-truong-hoc">Giáo dục <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/danh-sach-truong-hoc">Tuyển sinh</a></li>
+                            <li><a class="stretched-link" href="/danh-sach-bai-giang">Học online</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tiện ích <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/viec-lam">Việc làm</a></li>
+                            <li><a class="stretched-link" href="/phong-tro">Phòng trọ</a></li>
+                            <li><a class="stretched-link" href="/ket-ban">Kết bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ khác <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/dat-ve-may-bay">Đặt vé máy bay</a></li>
+                            <li><a class="stretched-link" href="/chuyen-tien-quoc-te">Chuyển tiền quốc tế</a></li>
+                            <li><a class="stretched-link" href="/chuyen-phat-nhanh">Chuyển phát nhanh</a></li>
+                            <li><a class="stretched-link" href="/thuong-mai">Thương mại</a></li>
+                            <li><a class="stretched-link" href="/van-hoa">Văn hóa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/chinh-sach-va-dieu-khoan">Chính sách & điều khoản</a></li>
+                    <li><a href="/lien-he">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="#">
+                    <img src="/img/logo-icon/apple_icon.png" />
+                </a>
+                <a href="#">
+                    <img src="/img/logo-icon/gplay_icon.png" />
+                </a>
+                <div class="bar-mobile">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title-main mt-lg-10 mt-3 name-lesson"></h1>
+        <div class="text-center mt-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="/danh-sach-bai-giang">Bài giảng</a></li>
+                <li class="breadcrumb-item active name-lesson" aria-current="page"></li>
+            </ol>
+        </div>
+    </div>
+</header>
+<div class="bg-white py-lg-10 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-9">
+                <div class="embed-responsive embed-responsive-16by9" id="video-first-js">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2nLSy6BD4QA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="box-video__view big flex-item my-lg-4 my-3" id="like-view-js">
+                    
+                </div>
+            <div class="content-detail">
+                <p id="description">
+                </p>
+            </div>
+            <div class="box-shadow mt-lg-8 mb-lg-5 mt-5">
+                <div class="detail-title">Danh sách bài giảng</div>
+                <div class="box-shadow__body" id="video-js">
+                </div>
+            </div>
+            <div class="box-shadow mt-lg-8 mb-lg-5 mt-5">
+                <div class="detail-title">Tài liệu <i class="fas fa-download ml-2"></i></div>
+                <div class="box-shadow__body box-document" id="document-js">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-3">
+            @Html.Partial("MenuChild")
+        </div>
+    </div>
+</div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            if (ReadCookie("token") !== "") {
+                req = getDetailBaiGiang(@idLesson);
+                req.done(function (response) {
+                    console.log(response.data)
+                    if (response.statusCode === Const.SuccessCode) {
+                        try {
+                            var data = response.data;
+                            //get tên bài giảng
+                            $(".name-lesson").html(data.ten);
+
+                            //get video 1'
+                            var video1 = `<iframe width="560" height="315" src="` + data.videoes[0].path + `" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                            $("#video-first-js").html(video1);
+
+                            //get mô tả
+                            var description = data.moTa;
+                            $("#description").html(description);
+                            
+                            //get tương tác
+                            var likeView = `<div><i class="fal fa-heart mr-1"></i>` + data.soLuotThich + ` lượt thích</div>
+                                            <div><i class="fal fa-eye mr-1"></i>` + data.soLuotXem + ` lượt xem</div>`
+                            $("#like-view-js").html(likeView);
+
+                            //get videoes
+                            for (const item of data.videoes) {
+                                var date = item.ngayDang
+                                var videoes = `<div class="media media-video">
+                                                <div class="embed-responsive embed-responsive-16by9 list-lesson">
+                                                    <iframe width="560" height="315" src="` + item.path + `" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media-video__name">` + item.ten + `</div>
+                                                    <div class="media-video__view">` + item.soLuotXem + ` lượt xem</div>
+                                                    <div class="media-video__view">` + date + `</div>
+                                                </div>
+                                            </div>`
+                                $("#video-js").append(videoes);
+                            }
+
+                            //get tài liệu
+                            for (const item of data.files) {
+                                var document = `<a href=" ` + item.path + `" download>
+                                                        <i class="fal fa-file-download mr-1"></i> `+ item.ten +`
+                                                    </a>`
+                                $("#document-js").append(document);
+                            }
+                        }
+                        catch (e) {
+                            $.toast({
+                                heading: 'Thông báo',
+                                text: e,
+                                showHideTransition: 'fade',
+                                icon: 'error'
+                            })
+                        }
+                    }
+                    else {
+                        $.toast({
+                            heading: 'Thông báo',
+                            text: response.message,
+                            showHideTransition: 'fade',
+                            icon: 'error'
+                        })
+                    }
+                });
+            }
+            else {
+                $.toast({
+                    heading: 'Thông báo',
+                    text: 'Không lấy được token!',
+                    showHideTransition: 'fade',
+                    icon: 'error'
+                })
+            }
+        });
+    </script>
+}

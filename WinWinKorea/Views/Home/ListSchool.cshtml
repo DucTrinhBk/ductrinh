@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Danh sách trường";
+}
+@section Scripts{
+    <script>
+        getChuyenNganh();
+        //getXepLoai();
+        getQuocGia();
+        getAllTruong('', '', '', '');
+    </script>
+}
+<header class="header-school">
+    <img class="img-cover" src="/img/banner/city.jpg" alt="..." />
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="nav__left">
+                <a href="/" class="logo">
+                    <img class="logo-img v1" src="img/logo-icon/logov2.png" alt="..." />
+                    <img class="logo-img v2" src="img/logo-icon/logov3.png" alt="..." />
+                </a>
+                <ul class="ul-reset menu">
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li>
+                        <a href="/danh-sach-truong-hoc">Giáo dục <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/danh-sach-truong-hoc">Tuyển sinh</a></li>
+                            <li><a class="stretched-link" href="/danh-sach-bai-giang">Học online</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tiện ích <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/viec-lam">Việc làm</a></li>
+                            <li><a class="stretched-link" href="/phong-tro">Phòng trọ</a></li>
+                            <li><a class="stretched-link" href="/ket-ban">Kết bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ khác <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/dat-ve-may-bay">Đặt vé máy bay</a></li>
+                            <li><a class="stretched-link" href="/chuyen-tien-quoc-te">Chuyển tiền quốc tế</a></li>
+                            <li><a class="stretched-link" href="/chuyen-phat-nhanh">Chuyển phát nhanh</a></li>
+                            <li><a class="stretched-link" href="/thuong-mai">Thương mại</a></li>
+                            <li><a class="stretched-link" href="/van-hoa">Văn hóa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/chinh-sach-va-dieu-khoan">Chính sách & điều khoản</a></li>
+                    <li><a href="/lien-he">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="#">
+                    <img src="/img/logo-icon/apple_icon.png" />
+                </a>
+                <a href="#">
+                    <img src="/img/logo-icon/gplay_icon.png" />
+                </a>
+                <div class="bar-mobile">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title-main mt-lg-10 mt-3">Giáo dục</h1>
+        <div class="text-center mt-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Giáo dục</li>
+            </ol>
+        </div>
+        <form class="form-search mt-lg-6 mt-4">
+            <div class="form-group">
+                <select class="form-control drop-khu-vuc" id="khuvuc">
+                    <option selected value="">Chọn khu vực</option>
+                </select>
+                <i class="fas fa-sort-down"></i>
+            </div>
+            @*<div class="form-group">
+                    <select class="form-control drop-xep-loai" id="xeploai">
+                        <option  selected value="">Sắp xếp</option>
+                    </select>
+                    <i class="fas fa-sort-down"></i>
+                </div>*@
+            <div class="form-group">
+                <select class="form-control drop-chuyen-nganh" id="chuyennganh">
+                    <option selected value="">Chọn chuyên ngành</option>
+                </select>
+                <i class="fas fa-sort-down"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" name="" required="" id="suggestBox" class="form-control" maxlength="128" autocomplete="off" value="" placeholder="Tên trường">
+                <i class="far fa-search"></i>
+            </div>
+            <button type="button" class="btn btn-style" onclick="getAllTruong()">Tìm kiếm</button>
+        </form>
+    </div>
+</header>
+<div class="bg-white py-lg-10 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-9">
+                <div class="mb-lg-6 mb-4 result-search">Có <strong id="countResult">168</strong> kết quả tìm kiếm</div>
+                <div id="listSchool">
+                </div>
+                @*<ul class="pagination mt-lg-8 mt-4">
+                        <li class="page-item">
+                            <a class="page-link prev-btn" aria-label="Previous">
+                                <span aria-hidden="true"><i class="fal fa-chevron-left"></i></span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link next-btn" aria-label="Next">
+                                <span aria-hidden="true"><i class="fal fa-chevron-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>*@
+            </div>
+            <div class="col-sm-12 col-lg-3">
+                @Html.Partial("MenuChild")
+            </div>
+        </div>
+    </div>
+</div>

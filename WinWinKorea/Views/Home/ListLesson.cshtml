@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Danh sách bài giảng";
+}
+@section Scripts{
+    <script>
+        getAllLesson('');
+        getChuyenNganh();
+    </script>
+}
+<header>
+    <img class="img-cover" src="/img/banner/lessononline.jpg" alt="..." />
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="nav__left">
+                <a href="/" class="logo">
+                    <img class="logo-img v1" src="img/logo-icon/logov2.png" alt="..." />
+                    <img class="logo-img v2" src="img/logo-icon/logov3.png" alt="..." />
+                </a>
+                <ul class="ul-reset menu">
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li>
+                        <a href="/danh-sach-truong-hoc">Giáo dục <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/danh-sach-truong-hoc">Tuyển sinh</a></li>
+                            <li><a class="stretched-link" href="/danh-sach-bai-giang">Học online</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tiện ích <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/viec-lam">Việc làm</a></li>
+                            <li><a class="stretched-link" href="/phong-tro">Phòng trọ</a></li>
+                            <li><a class="stretched-link" href="/ket-ban">Kết bạn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ khác <i class="far fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a class="stretched-link" href="/dat-ve-may-bay">Đặt vé máy bay</a></li>
+                            <li><a class="stretched-link" href="/chuyen-tien-quoc-te">Chuyển tiền quốc tế</a></li>
+                            <li><a class="stretched-link" href="/chuyen-phat-nhanh">Chuyển phát nhanh</a></li>
+                            <li><a class="stretched-link" href="/thuong-mai">Thương mại</a></li>
+                            <li><a class="stretched-link" href="/van-hoa">Văn hóa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/chinh-sach-va-dieu-khoan">Chính sách & điều khoản</a></li>
+                    <li><a href="/lien-he">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="#">
+                    <img src="/img/logo-icon/apple_icon.png" />
+                </a>
+                <a href="#">
+                    <img src="/img/logo-icon/gplay_icon.png" />
+                </a>
+                <div class="bar-mobile">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title-main mt-lg-10 mt-3">Học online</h1>
+        <div class="text-center mt-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Học online</li>
+            </ol>
+        </div>
+        <form class="form-search form-search--online mt-lg-6 mt-4">
+            <div class="form-group">
+                <select class="form-control drop-chuyen-nganh" id="chuyennganh">
+                    <option selected value="">Chọn chuyên ngành</option>
+                </select>
+                <i class="fas fa-sort-down"></i>
+            </div>
+            <button class="btn btn-style" onclick="getAllLesson()">Tìm kiếm</button>
+        </form>
+    </div>
+</header>
+<div class="bg-white py-lg-10 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-9">
+                <div class="row row-mobile-10" id="lesson-online">
+                    @*<div class="col-sm-12 col-lg-6 mb-lg-6 mb-4">
+                        <div class="box-video">
+                            <div class="box-video__img">
+                                <a href="thong-tin-bai-giang.html"><img class="img-fluid" src="/img/banner/video.png" alt="..." /></a>
+                            </div>
+                            <div class="box-video__content">
+                                <a class="box-video__name" href="thong-tin-bai-giang.html">
+                                    <span class="truncate-h" data-line="1"> Tiếng Hàn cho người mới học. - Khóa học tiếng Hàn</span>
+                                </a>
+                                <div class="box-video__view flex-item my-lg-4 my-3">
+                                    <div><i class="fal fa-heart mr-1"></i>200 lượt thích</div>
+                                    <div><i class="fal fa-eye mr-1"></i>1200 lượt xem</div>
+                                </div>
+                                <p class="description truncate-h pt-1" data-line="3">
+                                    Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit anim id est laborum Excepteur
+                                    sint occaecat cupidatat non proidento Excepteur sint occaecat cupidatat non proidento
+                                </p>
+                                <a href="#" class="btn mt-lg-4 mt-3 pl-0">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-3">
+                @Html.Partial("MenuChild")
+            </div>
+        </div>
+    </div>
+</div>
